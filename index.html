@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KHALÉA BMI Calculator</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- Decorative background -->
+    <div class="background-flower flower-1">✿</div>
+
+    <div class="background-flower flower-2">❀</div>
+
+
+    <main class="page">
+
+        <!-- Main Card -->
+        <section class="card">
+
+            <!-- Top decoration -->
+            <div class="top-decoration">
+
+                <span>♡</span>
+
+                <div></div>
+
+                <span>♡</span>
+
+            </div>
+
+
+            <!-- Header -->
+            <header>
+
+                <p class="eyebrow">
+                    A LITTLE CHECK-IN
+                </p>
+
+
+                <h1>
+                    KHALÉA
+                    <em>BMI</em>
+                </h1>
+
+
+                <p class="intro">
+                    Let's check your BMI and discover your
+                    healthy weight range!
+                </p>
+
+            </header>
+
+
+            <!-- BMI Form -->
+            <form id="bmiForm">
+
+                <!-- Name -->
+                <div class="field">
+
+                    <label for="name">
+                        Your name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="e.g. Sarah"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- Weight and Height -->
+                <div class="two-fields">
+
+                    <!-- Weight -->
+                    <div class="field">
+
+                        <label for="weight">
+                            Weight
+                        </label>
+
+                        <div class="input-unit">
+
+                            <input
+                                type="number"
+                                id="weight"
+                                placeholder="55"
+                                min="1"
+                                max="500"
+                                step="0.1"
+                            >
+
+                            <span>kg</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Height -->
+                    <div class="field">
+
+                        <label for="height">
+                            Height
+                        </label>
+
+                        <div class="input-unit">
+
+                            <input
+                                type="number"
+                                id="height"
+                                placeholder="165"
+                                min="1"
+                                max="300"
+                                step="0.1"
+                            >
+
+                            <span>cm</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Error message -->
+                <p
+                    id="errorMessage"
+                    class="error">
+                </p>
+
+
+                <!-- Calculate button -->
+                <button
+                    type="submit"
+                    class="calculate">
+
+                    Calculate my BMI
+
+                    <span>→</span>
+
+                </button>
+
+            </form>
+
+
+
+            <section
+                id="result"
+                class="result">
+
+
+                <div class="result-line"></div>
+
+
+                <p class="result-label">
+                    Here's your result ♡
+                </p>
+
+
+                <h2>
+                    Hello,
+                    <span id="resultName">you</span> ♡
+                </h2>
+
+
+                <!-- BMI Number -->
+                <div class="bmi-card">
+
+                    <div>
+
+                        <p>
+                            Your BMI
+                        </p>
+
+                        <strong id="bmiValue">
+                            0.0
+                        </strong>
+
+                    </div>
+
+
+                    <!-- Category -->
+                    <div
+                        id="bmiCategory"
+                        class="bmi-category">
+
+                        -
+
+                    </div>
+
+                </div>
+
+
+                <!-- BMI Scale -->
+                <div class="bmi-scale">
+
+                    <div class="scale-bar">
+
+                        <span class="low"></span>
+
+                        <span class="healthy"></span>
+
+                        <span class="high"></span>
+
+                        <span class="very-high"></span>
+
+
+                        <!-- marker -->
+                        <div
+                            id="marker"
+                            class="marker">
+                        </div>
+
+                    </div>
+
+
+                    <div class="scale-text">
+
+                        <span>Under</span>
+
+                        <span>Healthy</span>
+
+                        <span>Over</span>
+
+                        <span>High</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Healthy Weight -->
+                <div class="ideal">
+
+                    <div class="flower-icon">
+                        ❀
+                    </div>
+
+
+                    <div>
+
+                        <p>
+                            Healthy weight range
+                        </p>
+
+                        <strong id="idealWeight">
+                            0 kg — 0 kg
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quote -->
+                <p class="little-note">
+                   Take care of yourself,
+                    one little step at a time ♡ .
+                </p>
+
+
+                <!-- Reset -->
+                <button
+                    type="button"
+                    id="resetButton"
+                    class="again">
+
+                    Calculate again
+
+                </button>
+
+            </section>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            Made with ♡ using HTML, CSS & JavaScript
+        </footer>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

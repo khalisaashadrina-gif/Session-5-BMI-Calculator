@@ -1,0 +1,766 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    min-height: 100vh;
+
+    background: #eee8dc;
+
+    color: #40372f;
+
+    font-family: "DM Sans", sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 35px 20px;
+}
+
+
+/* =========================
+   SMALL DECORATIONS
+========================= */
+
+.background-flower {
+    position: fixed;
+
+    pointer-events: none;
+
+    color: #b29d86;
+
+    opacity: 0.25;
+
+    font-family: Georgia, serif;
+}
+
+.flower-1 {
+    top: 45px;
+    left: 7%;
+
+    font-size: 75px;
+
+    transform: rotate(-15deg);
+}
+
+.flower-2 {
+    bottom: 45px;
+    right: 8%;
+
+    font-size: 65px;
+
+    transform: rotate(15deg);
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    width: 100%;
+
+    max-width: 475px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.card {
+    position: relative;
+
+    background: #faf7f1;
+
+    border: 1px solid #ded4c5;
+
+    border-radius: 28px;
+
+    padding: 38px 40px 35px;
+
+    box-shadow:
+        0 20px 50px rgba(82, 67, 52, 0.12);
+}
+
+
+/* little corner decoration */
+
+.card::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 20px;
+    right: 24px;
+
+    color: #b49d83;
+
+    font-size: 15px;
+
+    opacity: 0.7;
+}
+
+
+.card::after {
+    content: "✦";
+
+    position: absolute;
+
+    bottom: 20px;
+    left: 24px;
+
+    color: #b49d83;
+
+    font-size: 11px;
+
+    opacity: 0.5;
+}
+
+
+/* =========================
+   TOP DECORATION
+========================= */
+
+.top-decoration {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+
+    color: #a8957f;
+
+    font-size: 11px;
+}
+
+
+.top-decoration div {
+    height: 1px;
+
+    flex: 1;
+
+    background: #ded4c5;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.eyebrow {
+    color: #9c8975;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+
+h1 {
+    font-family: "Playfair Display", serif;
+
+    color: #443a32;
+
+    font-size: 49px;
+
+    line-height: 0.95;
+
+    font-weight: 500;
+
+    text-align: center;
+}
+
+
+h1 em {
+    display: block;
+
+    color: #92765d;
+
+    font-style: italic;
+
+    font-size: 40px;
+
+    margin-top: 5px;
+
+    /* hapus jarak ke kanan */
+    margin-left: 0;
+}
+
+
+.intro {
+    max-width: 290px;
+
+    margin: 17px auto 0;
+
+    color: #918476;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.field {
+    margin-bottom: 18px;
+}
+
+
+.field label {
+    display: block;
+
+    color: #5b4d42;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+
+.field input {
+    width: 100%;
+
+    height: 48px;
+
+    border: 1px solid #dcd1c2;
+
+    border-radius: 12px;
+
+    background: #fffdf9;
+
+    padding: 0 14px;
+
+    outline: none;
+
+    color: #443a32;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+
+.field input:focus {
+    border-color: #a89073;
+
+    box-shadow:
+        0 0 0 3px rgba(168, 144, 115, 0.10);
+}
+
+
+.field input::placeholder {
+    color: #b9ad9f;
+}
+
+
+.two-fields {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+}
+
+
+.input-unit {
+    position: relative;
+}
+
+
+.input-unit input {
+    padding-right: 40px;
+}
+
+
+.input-unit span {
+    position: absolute;
+
+    right: 14px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #9c8b78;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+/* Remove number arrows */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+    margin: 0;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.error {
+    display: none;
+
+    background: #f5e6df;
+
+    border: 1px solid #e4cfc4;
+
+    color: #8d6255;
+
+    border-radius: 10px;
+
+    padding: 10px;
+
+    margin-bottom: 12px;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   CALCULATE BUTTON
+========================= */
+
+.calculate {
+    width: 100%;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #4d433a;
+
+    color: #fffdf8;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    letter-spacing: 0.2px;
+
+    transition: all 0.25s ease;
+}
+
+
+.calculate span {
+    margin-left: 8px;
+
+    color: #d8c6af;
+}
+
+
+.calculate:hover {
+    background: #625548;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(74, 62, 50, 0.15);
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result {
+    display: none;
+
+    margin-top: 30px;
+}
+
+
+.result-line {
+    width: 42px;
+
+    height: 2px;
+
+    background: #a89073;
+
+    margin-bottom: 17px;
+}
+
+
+.result-label {
+    color: #a18d78;
+
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    font-weight: 600;
+}
+
+
+.result h2 {
+    color: #493e35;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    margin: 5px 0 18px;
+}
+
+
+.result h2 span {
+    color: #94775c;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   BMI RESULT CARD
+========================= */
+
+.bmi-card {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #f0e9dc;
+
+    border: 1px solid #ded2c1;
+
+    border-radius: 17px;
+
+    padding: 20px 22px;
+
+    margin-bottom: 22px;
+}
+
+
+.bmi-card p {
+    color: #988875;
+
+    font-size: 10px;
+
+    margin-bottom: 3px;
+}
+
+
+.bmi-card strong {
+    color: #4b4036;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   BMI CATEGORY
+========================= */
+
+.bmi-category {
+    padding: 7px 12px;
+
+    border-radius: 30px;
+
+    background: #dfe8dd;
+
+    color: #5b7059;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   BMI SCALE
+========================= */
+
+.bmi-scale {
+    margin: 10px 2px 23px;
+}
+
+
+.scale-bar {
+    height: 8px;
+
+    display: flex;
+
+    position: relative;
+
+    border-radius: 20px;
+
+    overflow: visible;
+}
+
+
+.scale-bar span {
+    flex: 1;
+}
+
+
+.low {
+    background: #c5d5dc;
+
+    border-radius: 20px 0 0 20px;
+}
+
+
+.healthy {
+    background: #c9d8c5;
+}
+
+
+.high {
+    background: #e5d1aa;
+}
+
+
+.very-high {
+    background: #d8b9b2;
+
+    border-radius: 0 20px 20px 0;
+}
+
+
+.marker {
+    position: absolute;
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #fffdf8;
+
+    border: 3px solid #5a4d42;
+
+    top: -5px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    transition: left 0.5s ease;
+}
+
+
+.scale-text {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #a79887;
+
+    font-size: 8px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   IDEAL WEIGHT
+========================= */
+
+.ideal {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 14px 16px;
+
+    background: #f7f1e3;
+
+    border: 1px solid #e7dcc5;
+
+    border-radius: 15px;
+}
+
+
+.flower-icon {
+    width: 39px;
+
+    height: 39px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eadfc8;
+
+    color: #967b59;
+
+    font-size: 18px;
+}
+
+
+.ideal p {
+    color: #9d8b6b;
+
+    font-size: 9px;
+
+    margin-bottom: 3px;
+}
+
+
+.ideal strong {
+    color: #665640;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   NOTE
+========================= */
+
+.little-note {
+    text-align: center;
+
+    color: #9b897a;
+
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    font-size: 11px;
+
+    margin: 20px 0 15px;
+}
+
+
+/* =========================
+   AGAIN BUTTON
+========================= */
+
+.again {
+    width: 100%;
+
+    height: 38px;
+
+    background: transparent;
+
+    border: 1px solid #d9cdbf;
+
+    border-radius: 10px;
+
+    color: #907d6b;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.again:hover {
+    background: #f5efe6;
+
+    border-color: #b7a28a;
+
+    color: #665547;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    color: #9d8e80;
+
+    font-size: 9px;
+
+    margin-top: 15px;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 20px 14px;
+    }
+
+    .card {
+        padding: 30px 23px;
+    }
+
+    h1 {
+        font-size: 44px;
+    }
+
+    h1 em {
+        font-size: 37px;
+    }
+
+    .flower-1,
+    .flower-2 {
+        display: none;
+    }
+}
